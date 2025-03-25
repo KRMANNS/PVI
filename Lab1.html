@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+<title>Students</title>
+<link rel="stylesheet" href="Lab1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+<h2" class="cmstext">CMS</h2>
+<div class="container" onclick="changeImage(true)" onmouseleave="changeImage(false)" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" ><img src="bell_1827349.png" alt="Bell" id="bell"  class="bellgif">
+    <div class="tooltip">У вас немає повідомлень</div>
+</div>
+<div class="container2" onmouseover="showTooltip2(this)" onmouseout="hideTooltip2(this)" ><img src="free-icon-font-user-3917705.png" alt="Bell" class="bellgif"><h2" class="profiletext">Kozak Roman</h2>
+    <div class="tooltip2">
+        <ul>
+            <li><a href="...">Profile</a></li>
+            <li><a href="...">Log Out</a></li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="sidebar">
+    <ul>
+        <a href="Lab1_1.html">Dashboard</a>
+        <a href="Lab1.html">Students</a> 
+        <a href="Lab1_2.html">Tasks</a>
+    </ul>
+</div>
+<div class="stable">
+    <div>
+        <h1>Students</h1>
+        <button class="addbutton" id="openFormBtn">+</button>
+        <div id="studentForm" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Додати студента</h2>
+                <form id="addStudentForm">
+                    <label for="group">Група:</label>
+                    <input type="text" id="group" name="group" required placeholder="Наприклад, PZ-21">
+        
+                    <br><label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required placeholder="Введіть ім'я">
+        
+                    <br><label>Гендер:</label>
+                    <br><div>
+                        <input type="radio" id="male" name="gender" value="M" required>
+                        <label for="male">M</label>
+        
+                        <input type="radio" id="female" name="gender" value="F">
+                        <label for="female">F</label>
+                    </div>
+        
+                    <br><label for="birthday">День народження:</label>
+                    <input type="date" id="birthday" name="birthday" required>
+        
+                    <br><button type="submit">Додати</button>
+                </form>
+            </div>
+        </div>
+            <table id="studetnTable">
+                <tr> 
+                    <th style="width: 1vw"></th>
+                    <th style="width: 6vw;">Group</th>
+                    <th style="width: 20vw;">Name</th>
+                    <th style="width: 5vw">Gender</th>
+                    <th style="width: 8vw;">Birthday</th>
+                    <th style="width: 5vw">Status</th>
+                    <th style="width: 13vw;">Options</th>
+                </tr>
+                <!-- <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Pz-21</td>
+                    <td>Kozak Roman</td>
+                    <td>M</td>
+                    <td>2006-06-17</td>
+                    <td><span class="status-indicator"></span></td>
+                    <ul><td><button class="editbutton">Edit</button><button class="deletebutton">Delete</button></td></ul>
+                </tr> -->
+                
+            </table>
+            <ul class="pagination">
+                <li><button>&lt;</button></li>  <!-- Кнопка "Назад" -->
+                <li><button class="active">1</button></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+                <li><button>4</button></li>
+                <li><button>...</button></li>
+                <li><button>&gt;</button></li>  <!-- Кнопка "Вперед" -->
+            </ul>
+    </div> 
+</div>
+
+<script src="Lab1.js"></script>
+</body>
+</html>
